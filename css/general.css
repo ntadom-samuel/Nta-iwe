@@ -1,0 +1,100 @@
+/* 
+---01 TYPOGRAPHY SYSTEM:
+-FONT SIZE(px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+
+-FONT WEIGHTS
+Default: 400
+Msdium: 500
+Semi-bold: 600
+Bold: 700
+
+-LINE-HEIGHTS
+Default: 1 
+Small: 1.05
+medium: 1.2
+Paragraph-default: 1.5
+large: 1.8
+
+-LETTER SPACING
+-(-0.5px)
+- 0.75px
+
+---02 COLOR:
+-Primary: #ffec99 
+-Primary: #eebefa
+#B2533E
+
+-Tints:
+#fffdf5
+
+#eebefa
+#fdf9ff
+#fcf2fe
+
+#f3d9fa
+
+
+
+
+-Shades:
+
+#be98c8
+#775f7d
+#47394b
+#302632
+
+#ffec99 
+#b3a56b
+
+#472119
+-Accent:
+-Grey:
+#888
+#767676 : Lightest grey allowed on #fff background
+#6f6f6f : Lightest grey allowed on #fdf2e9 background.
+#555
+#333
+
+
+---05 SHADOWS
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+---06 BORDER-RADUIS
+Default: 9px
+-11px
+
+---07 WHITE SPACE:
+-SPACING(px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  color: #555;
+}
+
+.container {
+  /* Don't use paddings to set your container */
+  max-width: 120rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.grid-3-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
