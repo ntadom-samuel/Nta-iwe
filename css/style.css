@@ -173,9 +173,10 @@
 }
 /* top-display */
 .top-display-header {
-  color: #302632;
+  color: #472119;
   font-size: 8.6rem;
   font-weight: bold;
+  margin-bottom: 3.2rem;
 }
 .top-display-header span {
   grid-column: 1/3;
@@ -191,7 +192,8 @@
 
 .top-display-text-header-small {
   font-size: 1.2rem;
-  color: #be98c8;
+  color: #b2533e;
+  font-weight: bolder;
 
   /* margin-bottom: 0.2rem; */
 }
@@ -241,24 +243,46 @@
 /* bottom display */
 /* FORMAT NAMES BELOW */
 .bottom-display {
+  /* Note: you can add an absolute and relative element to the same class */
   position: relative;
-
-  display: flex;
-  justify-content: space-between;
-  /* TODO: Make flex box overflow and scroll */
+  height: 22.5rem;
+  max-width: 80rem;
+  /* margin: 0 auto; */
+  overflow: hidden;
 }
 
 .left-arrow-container,
 .right-arrow-container {
   position: absolute;
   /* color for icons */
-  color: #302632;
+  color: #fdf9ff;
   background-color: #be98c8;
   padding: 1.6rem;
   border-radius: 50%;
   transform: translateY(-50%);
   top: 50%;
-  box-shadow: inset 0 0 0 1px #302632;
+  box-shadow: 0 0 0 #30263266;
+}
+.slide--1,
+.slide--2,
+.slide--3,
+.slide--4,
+.slide--5 {
+  position: absolute;
+}
+.slide--1 {
+}
+.slide--2 {
+  transform: translateX(100%);
+}
+.slide--3 {
+  transform: translateX(200%);
+}
+.slide--4 {
+  transform: translateX(300%);
+}
+.slide--5 {
+  transform: translateX(400%);
 }
 
 .left-arrow-container:hover,
@@ -267,31 +291,34 @@
 }
 
 .left-arrow-container {
-  left: -3.5%;
+  left: 0.5%;
 }
 .right-arrow-container {
-  right: -3.5%;
+  right: 0.5%;
 }
 .left-arrow,
 .right-arrow {
   font-size: 2.4rem;
 }
-.price-card {
-  overflow: hidden;
-  padding-bottom: 2.4rem;
-  border-radius: 5px;
-  max-width: 22.5rem;
-  box-shadow: inset 0 0 0 0.2px #302632;
-}
 
-.price-card:hover {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+.price-card {
+  display: inline-block;
+  display: flex;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 33.3333%;
+  box-shadow: inset 0 0 0 0.5px #302632;
 }
 
 .bottom-display-images {
   /* for image size to change, you must manipulate it directly on the image element*/
-  width: 22.5rem;
+  width: 50%;
   height: 22.5rem;
+}
+
+.bottom-description {
+  width: 50%;
+  /* background-color: #fcf2fe; */
 }
 
 .vase-name {
@@ -367,6 +394,7 @@
 
 .feature-selector:link,
 .feature-selector:visited {
+  color: #302632;
   background-color: #ffec99;
   padding: 1.6rem 3.2rem;
   border-radius: 2.4rem;
@@ -426,11 +454,13 @@
 /* footer section */
 
 .footer {
+  /* height: 100vh; */
   padding: 12.8rem 0;
   background-color: #47394b;
   color: #fdf9ff;
 }
 .footer-colons-container {
+  margin: 0 18rem;
   display: grid;
   grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
   align-items: start;
