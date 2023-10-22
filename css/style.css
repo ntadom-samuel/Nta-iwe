@@ -1,0 +1,530 @@
+/* Pseudo class are set by putting a colon in front of an element */
+/* The element to be selected is the one that bears the colon */
+/* Lecture 28 */
+
+/* Order of styling hyper links
+-links, visited, hover, active */
+
+/* SECTION HOME */
+.landing-page {
+  /* absolute positioning is for blur */
+  /* position: relative; */
+  height: 100vh;
+  /* background-image: url("/img/home-page-image.jpg"); */
+  background-color: #fdf9ff;
+  background-size: cover;
+  z-index: -2;
+}
+/* home Header */
+.logo-icon-container {
+  text-decoration: none;
+  text-align: center;
+}
+.logo-icon {
+  font-size: 4.8rem;
+  color: #47394b;
+}
+.nav-bar {
+  /*       Top  LR   Bottom */
+  padding: 48px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  border-radius: 1.5rem;
+}
+.search-icon-container {
+  width: 10%;
+  padding: 0.6rem 0;
+  border: 1px solid #47394b;
+  border-left: none;
+  background-color: #ffec99;
+  border-radius: 0 1.5rem 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-bar {
+  background-color: #fff;
+  border: 1px solid #47394b;
+  border-radius: 1.5rem 0 0 1.5rem;
+  padding: 0.8rem 1.6rem;
+  width: 90%;
+}
+.search-icon {
+  color: #47394b;
+  font-size: 2rem;
+}
+.search-icon:hover,
+.search-icon-container:hover,
+.search-icon:active,
+.search-icon-container:active {
+  color: #775f7d;
+  background-color: #e6d48a;
+}
+
+.nav-links-list {
+  width: 40%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.nav-icon {
+  color: #47394b;
+  font-size: 2.4rem;
+}
+.nav-icon:hover {
+  color: #be98c8;
+  transform: scale(1.2);
+  transition: all 1s;
+}
+
+.nav-links,
+.nav-links:visited,
+.nav-links:link {
+  font-size: 1.4rem;
+  font-weight: bold;
+  /* text-decoration will work on the element directly hosting the text */
+  text-decoration: none;
+  color: #47394b;
+}
+.nav-links:hover,
+.nav-links:active {
+  color: #be98c8;
+  transition: all 1s;
+}
+/* home body */
+.home-main {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+}
+.home-container {
+  width: 50%;
+  text-align: center;
+  color: #47394b;
+}
+
+.home-content-header-main {
+  margin-bottom: 1rem;
+  font-size: 6.2rem;
+  line-height: 1.2;
+}
+.home-content-header-sub {
+  margin-bottom: 3.2rem;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: bold;
+  color: #472119;
+}
+.home-content-header-text {
+  margin-bottom: 4.8rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.home-btn:link,
+.home-btn:visited {
+  font-size: 1.6rem;
+  background-color: #ffec99;
+  text-decoration: none;
+  color: #775f7d;
+
+  box-shadow: inset 0 0 0 1px #775f7d;
+  padding: 2rem 4.8rem;
+  border-radius: 3.2rem;
+}
+
+.home-btn:hover,
+.home-btn:active {
+  /* FIX */
+  transform: translateY(-10%);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.076);
+  transition: all 1s;
+}
+
+/* .blur { */
+/* background-color: #f3d9fa; */
+/* used for incresing opacity */
+/* opacity: 0.5; */
+/* used for blurring */
+/* backdrop-filter: blur(3px); */
+/* must set height and width */
+/* height: 100vh; */
+/* width: 100%; */
+/* position: absolute; */
+/* top: 0; */
+/* z-index: -1; */
+/* } */
+
+/* SECTION PRODUCTS */
+.product-page {
+  padding: 6.4rem 0;
+  /* You must use two collors for linear gradient to workk */
+  background-image: linear-gradient(to right bottom, #fffdf5, #fffdf5);
+}
+/* top-display */
+.top-display-header {
+  color: #472119;
+  font-size: 8.6rem;
+  font-weight: bold;
+  margin-bottom: 3.2rem;
+}
+.top-display-header span {
+  grid-column: 1/3;
+}
+.top-display-text-container {
+  padding-bottom: 4.8rem;
+}
+
+.top-display-texts-container {
+  color: #302632;
+  grid-column: 3;
+}
+
+.top-display-text-header-small {
+  font-size: 1.2rem;
+  color: #b2533e;
+  font-weight: bolder;
+
+  /* margin-bottom: 0.2rem; */
+}
+.top-display-text-header-large {
+  font-size: 3.2rem;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  color: #be98c8;
+}
+.top-display-text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* 
+.image-collage--slim {
+  width: 25rem;
+  //box-shadowing works on images 
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 2px;
+  grid-row: 1;
+  grid-column: 1;
+  border-radius: 100%;
+}
+
+
+.top-display-images img:nth-child(1) {
+  transform: translate(175%, -70%);
+  z-index: 4;
+}
+
+.top-display-images img:nth-child(2) {
+  transform: translate(135%, -50%);
+  z-index: 3;
+}
+
+.top-display-images img:nth-child(3) {
+  transform: translate(95%, -20%);
+  z-index: 2;
+}
+
+.top-display-images img:nth-child(4) {
+  transform: translate(55%, 0%);
+  z-index: 1;
+} */
+
+/* bottom display */
+/* FORMAT NAMES BELOW */
+.bottom-display {
+  /* Note: you can add an absolute and relative element to the same class */
+  position: relative;
+  height: 22.5rem;
+  max-width: 80rem;
+  /* margin: 0 auto; */
+  overflow: hidden;
+}
+
+.left-arrow-container,
+.right-arrow-container {
+  position: absolute;
+  /* color for icons */
+  color: #fdf9ff;
+  background-color: #be98c8;
+  padding: 1.6rem;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  top: 50%;
+  box-shadow: 0 0 0 #30263266;
+}
+.slide--1,
+.slide--2,
+.slide--3,
+.slide--4,
+.slide--5 {
+  position: absolute;
+}
+.slide--1 {
+}
+.slide--2 {
+  transform: translateX(100%);
+}
+.slide--3 {
+  transform: translateX(200%);
+}
+.slide--4 {
+  transform: translateX(300%);
+}
+.slide--5 {
+  transform: translateX(400%);
+}
+
+.left-arrow-container:hover,
+.right-arrow-container:hover {
+  background-color: #775f7d;
+}
+
+.left-arrow-container {
+  left: 0.5%;
+}
+.right-arrow-container {
+  right: 0.5%;
+}
+.left-arrow,
+.right-arrow {
+  font-size: 2.4rem;
+}
+
+.price-card {
+  display: inline-block;
+  display: flex;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 33.3333%;
+  box-shadow: inset 0 0 0 0.5px #302632;
+}
+
+.bottom-display-images {
+  /* for image size to change, you must manipulate it directly on the image element*/
+  width: 50%;
+  height: 22.5rem;
+}
+
+.bottom-description {
+  width: 50%;
+  /* background-color: #fcf2fe; */
+}
+
+.vase-name {
+  padding: 0.8rem 1.6rem 0;
+  font-size: 1.8rem;
+  color: #302632;
+}
+
+.price {
+  padding: 0.8rem 1.6rem;
+  font-size: 2.4rem;
+  color: #775f7d;
+}
+
+/* .num-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.6rem;
+}
+.num-selector {
+  display: flex;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.increment-icon-container,
+.decrement-icon-container {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: blueviolet;
+}
+
+.decrement-icon-container {
+  border-left: 0;
+} */
+
+/* features section */
+.features-section {
+  border-top: 0.5px solid #f3d9fa;
+  /* Note: absolute positioning removes a child element from its parent. That is why an element who is absolute positioned will not inherit its parent's background color */
+  /* position: relative;  */
+  padding: 9.6rem 0;
+  background-color: #fffdf5;
+  opacity: 0.8;
+}
+.features-headers-container {
+  text-align: center;
+}
+.features-header-small {
+  font-size: 2.4rem;
+  margin-bottom: 6.4rem;
+}
+.features-header-large {
+  font-size: 6.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.features-nav {
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+  padding: 0.8rem 0.4rem 2.4rem;
+  color: #47394b;
+  border-bottom: 0.1px solid #47394b;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 6.4rem;
+}
+
+.feature-selector,
+.feature-selector:link {
+  color: #302632;
+  background-color: #ffec99;
+  padding: 1.6rem 3.2rem;
+  border-radius: 2.4rem;
+  text-decoration: none;
+}
+
+/*Learn more about the visited pseudoclass */
+/* 
+.feature-selector:visited {
+} */
+
+.feature-selector:hover,
+.feature-selector:active {
+  transform: translateY(-10%);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.096);
+  transition: all 1s;
+}
+
+.feature-selector-active {
+  background-color: #c17565;
+  transform: translateY(-10%);
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.096);
+  transition: all 1s;
+}
+
+.features-body {
+  padding-top: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features-text-container--1,
+.features-text-container--2,
+.features-text-container--3 {
+  border-radius: 5px;
+  display: none;
+  padding: 4.8rem 3.2rem;
+  width: 60%;
+  gap: 3.2rem;
+  grid-template-columns: 1fr 7fr;
+  background-color: #fcf2fe;
+}
+
+.feature-container-active {
+  display: grid;
+}
+
+.features-text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #47394b;
+}
+.features-icon-container {
+  padding: 1.6rem 1.6rem;
+  background-color: inherit;
+  /* color: #ffec99; */
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  /* as an iterm */
+  align-self: start;
+}
+.features-icon {
+  color: #b2533e;
+  font-size: 3.2rem;
+}
+
+/* footer section */
+
+.footer {
+  /* height: 100vh; */
+  padding: 12.8rem 0;
+  background-color: #47394b;
+  color: #fdf9ff;
+}
+.footer-colons-container {
+  margin: 0 18rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  align-items: start;
+  justify-content: center;
+  /* text-align: center; */
+}
+address,
+.footer-colon {
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+  /* semantic html have default features that you should override */
+  font-style: inherit;
+}
+.footer-colon-logo .logo-icon {
+  color: #fdf9ff;
+}
+.footer-colon-icons-container {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-icons {
+  font-size: 1.6rem;
+}
+.footer-icons:hover {
+  color: #ffec99;
+}
+
+.footer-colon-header {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 4.8rem;
+}
+.footer-address {
+  grid-row: 2/4;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+.footer-colon-link-text:link,
+.footer-colon-link-text:visited {
+  font-size: 1.4rem;
+  text-decoration: none;
+  /* Ypu must change your link's color unless it will remain blue */
+  color: #fdf9ff;
+}
+.footer-colon-link-text:active,
+.footer-colon-link-text:hover {
+  color: #ffec99;
+  transition: all 1s;
+}
+.footer-colon-text {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
