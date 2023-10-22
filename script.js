@@ -40,6 +40,8 @@ const prevSlide = () => {
 getCurSlide();
 right_button.addEventListener("click", nextSlide);
 left_button.addEventListener("click", prevSlide);
+
+
 //Implementing smooth scrolling from navs to sections
 const landingPage = document.querySelector(".landing-page");
 const productPage = document.querySelector(".product-page");
